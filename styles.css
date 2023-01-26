@@ -87,7 +87,7 @@ img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 3px solid white;
   /* margin-right: 1rem; */
 }
 .name-card p {
@@ -114,9 +114,9 @@ img {
 }
 .time-options-container ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 .time-options-container li {
   list-style: none;
@@ -166,6 +166,8 @@ img {
 .background-pic img {
   margin-top: -10px;
   margin-right: 1rem;
+  width: 78px;
+  height: 78px;
 }
 
 .dashboard-item:nth-of-type(1) > .background-pic {
@@ -178,7 +180,7 @@ img {
   background-color: var(--light-red-study);
 }
 .dashboard-item:nth-of-type(4) > .background-pic {
-  background-color: var(--lime-green);
+  background-color: #4bcf82;
 }
 .dashboard-item:nth-of-type(5) > .background-pic {
   background-color: #7335d2;
@@ -210,4 +212,73 @@ img {
 .dashboard-item-text p {
   font-size: 15px;
   color: var(--soft-blue);
+}
+/* DESKTOP STYLES */
+@media (min-width: 550px) {
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+  .name-and-options-card-container {
+    grid-column: 1/3;
+  }
+}
+
+@media (min-width: 768px) {
+  /* GRID CONTAINERS */
+  /* page layout */
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 30px;
+  }
+  .name-and-options-card-container {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    max-height: none;
+    grid-template-rows: repeat(10, 1fr);
+  }
+  .dashboard-item {
+    max-height: none;
+  }
+  /*component layout  */
+  .name-card {
+    grid-row: 1/8;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.5rem;
+  }
+
+  .time-options-container {
+    grid-row: 6/11;
+    justify-content: flex-start;
+  }
+
+  .time-options-container ul {
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 0; */
+  }
+  .dashboard-item {
+    grid-template-rows: repeat(10, 1fr);
+  }
+  .background-pic {
+    grid-row: 1/5;
+    grid-column: 1/2;
+  }
+  .dashboard-item-text {
+    grid-row: 3/11;
+    grid-column: 1/2;
+    gap: 1.5rem;
+  }
+  .dashboard-item-text .flex-bottom {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+  }
 }
