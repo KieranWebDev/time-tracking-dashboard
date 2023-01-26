@@ -137,6 +137,10 @@ img {
 .time-options-container button:hover {
   color: white;
 }
+.time-options-container button:focus {
+  color: white;
+  outline: none;
+}
 
 /* DASHBOARD ITEMS */
 /* dashboard item-grid-container */

@@ -1,6 +1,7 @@
 const activities = document.querySelectorAll('.activity-title');
 const timeAmount = document.querySelectorAll('.time-amount');
 const timeLastWeek = document.querySelectorAll('.previous-time-amount');
+const timeBtns = document.querySelectorAll('.time-button');
 console.log(activities);
 // Buttons
 const btnDaily = document.querySelector('.daily');
@@ -29,6 +30,7 @@ function displayHours(timeamount) {
     time.textContent = `Last Week - ${userData[index].timeframes[timeamount].previous}hrs`;
   });
 }
+displayHours('daily');
 
 // Event Listeners
 
