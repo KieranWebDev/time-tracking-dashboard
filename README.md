@@ -2,7 +2,7 @@
 
 This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
-# You can view the live site [here.](https://kieran-gill-time-tracking-dashboard-react.vercel.app/)
+# You can view the live site [here.](https://kieran-gill-time-tracking-dashboard-vanillajs.vercel.app/)
 
 ## Table of contents
 
